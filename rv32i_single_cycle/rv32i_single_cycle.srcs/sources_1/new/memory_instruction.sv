@@ -21,24 +21,24 @@
 
 module memory_instruction #(
     parameter WIDTH = 32, 
-    parameter DEPTH = 32
+    parameter ADDR_LOG = 10,           // 10 bits = 1024 words
+    parameter DEPTH = 1 << ADDR_LOG    // 1024 words (4KB)
 )(
-    // 1. Use $clog2(DEPTH) to get the number of bits needed (e.g., 5 bits for 32 depth)
-    // 2. Subtract 1 to get the correct range (e.g., [4:0])
-    input  logic [$clog2(DEPTH)-1:0] addr1, 
-    output logic [WIDTH-1:0]         addr1_out
+    input  logic clk, 
+    input  logic [ADDR_LOG-1:0] addr_word, 
+    output logic [WIDTH-1:0] inst_out
 );
     
+    // Inferred Block RAM
+    (* ram_style = "block" *) // Forces BRAM on Xilinx
     logic [WIDTH-1:0] mem_arr [0:DEPTH-1];
     
-    //    This loads machine code from a hex file at the start of simulation.
     initial begin
-        // format: $readmemh("filename.mem", array_name);
         $readmemh("instructions.mem", mem_arr); 
     end
-    
+     
     always_comb begin
-        addr1_out = mem_arr[addr1];
+        inst_out = mem_arr[addr_word];
     end
 
 endmodule

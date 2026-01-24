@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef" \
+"../../../../rv32i_single_cycle.srcs/sources_1/new/control_unit.sv" \
+"../../../../rv32i_single_cycle.srcs/sources_1/new/pc.sv" \
+"../../../../rv32i_single_cycle.srcs/sources_1/new/cpu.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

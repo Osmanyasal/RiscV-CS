@@ -1,0 +1,8 @@
+0.7
+2020.2
+May 21 2025
+22:59:56
+/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,uvm,,,,,,
+/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/control_unit.sv,1769253406,systemVerilog,,/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv,,control_unit,,uvm,../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef,,,,,
+/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv,1769253813,systemVerilog,,,,cpu,,uvm,../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef,,,,,
+/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv,1769107745,systemVerilog,,/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv,,pc,,uvm,../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef,,,,,

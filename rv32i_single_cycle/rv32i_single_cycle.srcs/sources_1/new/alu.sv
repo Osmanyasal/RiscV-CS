@@ -21,10 +21,10 @@
 
 
 module alu #(parameter WIDTH = 32)(
+        input logic signed [WIDTH-1:0] src_a,   // N bit input a
+        input logic signed [WIDTH-1:0] src_b,   // N bit input b
         input logic [WIDTH-1:0] alu_control,
-        input logic [WIDTH-1:0] in_a,   // N bit input a
-        input logic [WIDTH-1:0] in_b,   // N bit input b
-        output logic [2*WIDTH-1:0] out_c,    // multiplication makes it 2N, otherwise N+1 with carry.
+        output logic signed [2*WIDTH-1:0] out_alu,    // multiplication makes it 2N, otherwise N+1 with carry.
         output logic zero,
         output logic overflow,
         output logic negative,
