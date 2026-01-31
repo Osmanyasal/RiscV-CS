@@ -1,1 +1,5 @@
 Time resolution is 1 ps
+Forcing next_pc to be 1000
+PC is now:       1000
+mem_inst[1000]= ffc4a303
+regfile[9]= 00002004

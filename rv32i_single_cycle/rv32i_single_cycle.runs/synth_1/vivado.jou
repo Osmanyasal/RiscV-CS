@@ -3,22 +3,22 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Jan 24 14:21:47 2026
-# Process ID         : 998018
+# Start of session at: Fri Jan 30 21:37:53 2026
+# Process ID         : 1974293
 # Current directory  : /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1
-# Command line       : vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
-# Log file           : /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/cpu.vds
+# Command line       : vivado -log alu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu.tcl
+# Log file           : /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/alu.vds
 # Journal file       : /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/vivado.jou
 # Running On         : rt7-desktop1
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 7950X 16-Core Processor
-# CPU Frequency      : 5390.693 MHz
+# CPU Frequency      : 3012.000 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 66418 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 75007 MB
-# Available Virtual  : 63272 MB
+# Available Virtual  : 61053 MB
 #-----------------------------------------------------------
-source cpu.tcl -notrace
+source alu.tcl -notrace

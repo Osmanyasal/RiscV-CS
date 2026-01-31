@@ -1,10 +1,10 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Jan 24 14:21:58 2026
+| Date         : Fri Jan 30 21:38:05 2026
 | Host         : rt7-desktop1 running 64-bit Ubuntu 24.04.3 LTS
-| Command      : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
-| Design       : cpu
+| Command      : report_utilization -file alu_utilization_synth.rpt -pb alu_utilization_synth.pb
+| Design       : alu
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
 | Design State : Synthesized
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    1 |     0 |          0 |     63400 | <0.01 |
-|   LUT as Logic          |    1 |     0 |          0 |     63400 | <0.01 |
+| Slice LUTs*             |  576 |     0 |          0 |     63400 |  0.91 |
+|   LUT as Logic          |  576 |     0 |          0 |     63400 |  0.91 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |   30 |     0 |          0 |    126800 |  0.02 |
-|   Register as Flip Flop |   30 |     0 |          0 |    126800 |  0.02 |
+| Slice Registers         |    0 |     0 |          0 |    126800 |  0.00 |
+|   Register as Flip Flop |    0 |     0 |          0 |    126800 |  0.00 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 30    |          Yes |           - |        Reset |
+| 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -80,11 +80,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 3. DSP
 ------
 
-+-----------+------+-------+------------+-----------+-------+
-| Site Type | Used | Fixed | Prohibited | Available | Util% |
-+-----------+------+-------+------------+-----------+-------+
-| DSPs      |    0 |     0 |          0 |       240 |  0.00 |
-+-----------+------+-------+------------+-----------+-------+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| DSPs           |    4 |     0 |          0 |       240 |  1.67 |
+|   DSP48E1 only |    4 |       |            |           |       |
++----------------+------+-------+------------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -93,7 +94,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   34 |     0 |          0 |       210 | 16.19 |
+| Bonded IOB                  |  136 |     0 |          0 |       210 | 64.76 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -115,7 +116,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
@@ -149,12 +150,15 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   32 |                  IO |
-| FDCE     |   30 |        Flop & Latch |
-| CARRY4   |    8 |          CarryLogic |
-| IBUF     |    2 |                  IO |
-| LUT1     |    1 |                 LUT |
-| BUFG     |    1 |               Clock |
+| LUT6     |  252 |                 LUT |
+| LUT2     |  180 |                 LUT |
+| LUT5     |  156 |                 LUT |
+| OBUF     |   68 |                  IO |
+| IBUF     |   68 |                  IO |
+| LUT4     |   54 |                 LUT |
+| CARRY4   |   36 |          CarryLogic |
+| LUT3     |    5 |                 LUT |
+| DSP48E1  |    4 |    Block Arithmetic |
 +----------+------+---------------------+
 
 
