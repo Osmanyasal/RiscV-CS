@@ -21,39 +21,48 @@
 
 
 module control_unit(
-    input logic opcode, 
-    input logic [2:0] func3, 
-    input logic func7, 
+    // Inputs: Updated names to match your local signals
+    input  logic [6:0] control_opcode, 
+    input  logic [2:0] control_func3, 
+    input  logic [6:0] control_func7, 
+    
+    // Outputs
     output logic [3:0] control_alu,
-    output logic control_pc_en,
-    output logic control_regfile_we,
-    output logic control_data_mem_we
-    );
+    output logic       control_pc_en,
+    output logic       control_regfile_we,
+    output logic       control_data_mem_we
+);
     
     always_comb begin
-        
-        case(opcode)
-            7'b0000011: begin   // I type instructions
-                if(func3 == 3'h0) begin
-                    control_regfile_we = 1;
-                    control_alu = '0; 
+        // Set defaults to avoid unwanted latches
+        control_alu         = 4'b0000;
+        control_regfile_we  = 1'b0;
+        control_data_mem_we = 1'b0;
+        control_pc_en       = 1'b1; // Default PC increment
+
+        case(control_opcode)
+            7'b0000011: begin   // I-type (e.g., Load)
+                if(control_func3 == 3'b010) begin
+                    control_regfile_we = 1'b1;
+                    control_alu        = 4'b0000; 
                 end
-                else if(func3 == 3'h1) begin end
-                else if(func3 == 3'h2) begin end
-                else if(func3 == 3'h4) begin end
-                else if(func3 == 3'h5) begin end
-                else begin end
             end 
-            7'b0100011:begin end  // sw
-            7'b0110011:begin end  // r-type
-            7'b1100011:begin end  // beq
+            
+            7'b0100011: begin   // S-type (sw)
+                control_data_mem_we = 1'b1;
+            end 
+            
+            7'b0110011: begin   // R-type
+                control_regfile_we = 1'b1;
+            end 
+            
+            7'b1100011: begin   // B-type (beq)
+                // Branch logic here
+            end
+
             default: begin
-                control_alu = '0;
-                control_pc_en = '0;
-                control_regfile_we = '0;
-                control_data_mem_we = '0;
+                control_pc_en = 1'b0; // Halt or NOP behavior
             end
         endcase
-        control_pc_en = 1;
     end
 endmodule
