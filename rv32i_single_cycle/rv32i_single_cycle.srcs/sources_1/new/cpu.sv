@@ -74,7 +74,6 @@ module cpu #(
     
     //** DECODE STAGE **//
     assign control_opcode = inst_out[6:0];
-     
     assign control_rd = inst_out[11:7];
     assign control_func3 = inst_out[14:12]; 
     assign control_rs1 = inst_out[19:15];
@@ -82,6 +81,12 @@ module cpu #(
     assign control_rs2 = inst_out[24:20];
     
     // Immediate deconstruction by type
+    logic [WIDTH-1:0] control_imm_i_type;
+    logic [WIDTH-1:0] control_imm_s_type;
+    logic [WIDTH-1:0] control_imm_b_type;
+    logic [WIDTH-1:0] control_imm_u_type;
+    logic [WIDTH-1:0] control_imm_j_type;
+    
     assign control_imm_i_type = { {20{inst_out[31]}}, inst_out[31:20] };
     assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7] };
     assign control_imm_b_type = { {19{inst_out[31]}}, inst_out[31], inst_out[7], inst_out[30:25], inst_out[11:8], 1'b0 };
@@ -91,7 +96,7 @@ module cpu #(
     
     logic [WIDTH-1:0] imm_sign_ext;
     logic [WIDTH-1:0] rd1, rd2, data_mem_rd;    // output comes from reg file and data memory read op.
-    regfile reg_file(.clk(clk), .a1(inst_out[19:15]), .a2(inst_out[24:20]), .a3(inst_out[11:7]), .wd3(data_mem_rd), .we(control_regfile_we), .rd1(rd1), .rd2(rd2));
+    regfile reg_file(.clk(clk), .a1(control_rs1), .a2(control_rs2), .a3(control_rd), .wd3(data_mem_rd), .we(control_regfile_we), .rd1(rd1), .rd2(rd2));
     
     always_comb begin
         case(control_opcode)

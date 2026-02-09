@@ -3,28 +3,6 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/08/2026 07:09:20 PM
-// Design Name: 
-// Module Name: print_cpu_dashboard
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 02/08/2026 07:02:18 PM
 // Design Name: 
 // Module Name: print_cpu_dashboard
@@ -86,21 +64,21 @@ task print_cpu_dashboard();
     end
 
     $display("\n[DECODE PHASE]");
-    $display("\tReg Access    : RS1(x%0d)=0x%h, RS2(x%0d)=0x%h", 
+    $display("\tReg Access    : RD1(x%0d)=0x%h, RD2(x%0d)=0x%h", 
               dut.control_rs1, dut.rd1, dut.control_rs2, dut.rd2);
     $display("\tImm Decoded   : %0d (0x%h)", $signed(current_imm), current_imm);
 
     $display("\n[EXECUTE PHASE]");
-    $display("\tALU Inputs    : A=0x%h, B=0x%h", dut.alu_src_a, dut.alu_src_b);
-    $display("\tALU Result    : 0x%h", dut.alu_out_addr);
+    $display("\tALU Inputs    : A(%0d)=0x%h, B(%0d)=0x%h", dut.alu_src_a,dut.alu_src_a, dut.alu_src_b,dut.alu_src_b);
+    $display("\tALU Result    : (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr);
     
     $display("\n[MEMORY/WB PHASE]");
+    if (dut.control_opcode == 7'b0000011)
+        $display("\tAction        : MEM_READ (%0d)  [0x%h] => (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut.data_mem_rd,dut.data_mem_rd);
     if (dut.control_data_mem_we) 
-        $display("\tAction        : MEM_WRITE [0x%h] <= 0x%h", dut.alu_out_addr, dut.rd2);
-    else if (dut.control_opcode == 7'b0000011)
-        $display("\tAction        : MEM_READ  [0x%h] => 0x%h", dut.alu_out_addr, dut.data_mem_rd);
+        $display("\tAction        : MEM_WRITE (%0d) [0x%h] <= (%0d)0x%h",  dut.control_rd, dut.control_rd, dut.data_mem_rd,dut.data_mem_rd);
     else
-        $display("\tAction        : ALU_RESULT 0x%h => Register x%0d", dut.alu_out_addr, dut.control_rd);
+        $display("\tAction        : ALU_RESULT (%0d) 0x%h => Register (%0d)x%0d", dut.alu_out_addr,dut.alu_out_addr, dut.control_rd, dut.control_rd);
     
     $display("==================================================\n");
 endtask

@@ -1,0 +1,26 @@
+Time resolution is 1 ps
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (LOAD)
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 1000
+	Raw Hex       : 0xffc4a303
+	Binary Split  : 111111111100_01001_010_00110_0000011
+	Field Map     : [    imm    ] [rs1] [f3] [rd ] [ opcode ]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x9)=0x000003e6, RD2(x28)=0x00000000
+	Imm Decoded   : -4 (0xfffffffc)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A(998)=0x000003e6, B(-4)=0xfffffffc
+	ALU Result    : (994)0x000003e2
+
+[MEMORY/WB PHASE]
+	Action        : MEM_READ (994)  [0x000003e2] => (12345)0x00003039
+	Action        : MEM_WRITE (6) [0x06] <= (12345)0x00003039
+==================================================
+
+$finish called at time : 41 ns : File "/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv" Line 62

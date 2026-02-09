@@ -14,13 +14,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rt7/Desktop/RiscV-CS/rv
 INFO: [VRFC 10-311] analyzing module regfile
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_lw
-ERROR: [VRFC 10-4982] syntax error near 'include' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:32]
-ERROR: [VRFC 10-4982] syntax error near '=' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:43]
-ERROR: [VRFC 10-4982] syntax error near '=' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:44]
-ERROR: [VRFC 10-4982] syntax error near ';' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:47]
-ERROR: [VRFC 10-4982] syntax error near ';' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:48]
-ERROR: [VRFC 10-4982] syntax error near '=' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:52]
-ERROR: [VRFC 10-4982] syntax error near '=' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:53]
-ERROR: [VRFC 10-4982] syntax error near '=' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:54]
-ERROR: [VRFC 10-4982] syntax error near '#' [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:60]
-ERROR: [VRFC 10-8530] module 'tb_lw' is ignored due to previous errors [/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv:22]

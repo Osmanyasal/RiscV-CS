@@ -18,7 +18,6 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`include "print_cpu_dashboard.sv"
 
 module tb_lw;
     
@@ -29,18 +28,21 @@ module tb_lw;
     
     cpu dut(.*);
     
+    `include "print_cpu_dashboard.sv"
+
     always #5 clk = ~clk;   // 10ns period 
     
      initial begin
         // --- 1. Memory Initialization ---
         foreach(dut.mem_inst.mem_arr[i]) dut.mem_inst.mem_arr[i] = 32'h0;
-        
+        foreach(dut.reg_file.mem_arr[i]) dut.reg_file.mem_arr[i] = 32'h0;
+        foreach(dut.mem_data.mem_arr[i]) dut.mem_data.mem_arr[i] = 32'h0;
         clk = 0;
         rst = 1;
-        #20 rst = 0; 
+        #20 rst = 0; #1 
 
         // --- 2. Manual PC Jump ---
-        #1;
+
         force dut.next_pc = 32'd1000;
         force dut.control_pc_en = 1'b1;
         @(posedge clk);
@@ -56,7 +58,6 @@ module tb_lw;
         
         #5; // Let combinational logic settle
 
-       // --- 4. Formatted Dashboard ---
        print_cpu_dashboard();
         #10 $finish;
     end
