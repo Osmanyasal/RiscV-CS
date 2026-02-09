@@ -29,6 +29,8 @@ module cpu #(
     output logic [WIDTH-1:0] pc_debug
 );
     //** CONTROL UNIT **//
+    
+    // Instruction segments
     logic [3:0] control_alu;
     logic [6:0] control_opcode;
     logic [2:0] control_func3;
@@ -36,9 +38,19 @@ module cpu #(
     logic [4:0] control_rd;
     logic [4:0] control_rs1;
     logic [4:0] control_rs2;
+    
+    // Immediate deconstruction by type
+    logic [WIDTH-1:0] control_imm_i_type;
+    logic [WIDTH-1:0] control_imm_s_type;
+    logic [WIDTH-1:0] control_imm_b_type;
+    logic [WIDTH-1:0] control_imm_u_type;
+    logic [WIDTH-1:0] control_imm_j_type;
+    
+    // Write enable signals
     logic control_pc_en;
     logic control_regfile_we;
     logic control_data_mem_we;
+     
     
     control_unit _cu (
         // inputs
@@ -78,14 +90,7 @@ module cpu #(
     assign control_func3 = inst_out[14:12]; 
     assign control_rs1 = inst_out[19:15];
     assign control_func7 = inst_out[31:25];
-    assign control_rs2 = inst_out[24:20];
-    
-    // Immediate deconstruction by type
-    logic [WIDTH-1:0] control_imm_i_type;
-    logic [WIDTH-1:0] control_imm_s_type;
-    logic [WIDTH-1:0] control_imm_b_type;
-    logic [WIDTH-1:0] control_imm_u_type;
-    logic [WIDTH-1:0] control_imm_j_type;
+    assign control_rs2 = inst_out[24:20]; 
     
     assign control_imm_i_type = { {20{inst_out[31]}}, inst_out[31:20] };
     assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7] };
