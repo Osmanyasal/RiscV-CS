@@ -44,7 +44,7 @@ module control_unit(
             7'b0000011: begin   // I-type (e.g., Load)
                 if(control_func3 == 3'b010) begin
                     control_regfile_we = 1'b1;
-                    control_data_mem_we = 1'b1;
+                    control_data_mem_we = 1'b1; 
                     control_alu        = 4'b0000; 
                 end
             end 

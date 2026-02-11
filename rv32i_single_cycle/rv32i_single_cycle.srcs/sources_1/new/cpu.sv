@@ -89,8 +89,8 @@ module cpu #(
     assign control_rd = inst_out[11:7];
     assign control_func3 = inst_out[14:12]; 
     assign control_rs1 = inst_out[19:15];
+    assign control_rs2 = inst_out[24:20];
     assign control_func7 = inst_out[31:25];
-    assign control_rs2 = inst_out[24:20]; 
     
     assign control_imm_i_type = { {20{inst_out[31]}}, inst_out[31:20] };
     assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7] };

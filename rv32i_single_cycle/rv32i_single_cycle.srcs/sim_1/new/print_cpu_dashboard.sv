@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Osman Yasal
 // 
 // Create Date: 02/08/2026 07:02:18 PM
 // Design Name: 
@@ -75,8 +75,8 @@ task print_cpu_dashboard();
     $display("\n[MEMORY/WB PHASE]");
     if (dut.control_opcode == 7'b0000011)
         $display("\tAction        : MEM_READ (%0d)  [0x%h] => (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut.data_mem_rd,dut.data_mem_rd);
-    if (dut.control_data_mem_we) 
-        $display("\tAction        : MEM_WRITE (%0d) [0x%h] <= (%0d)0x%h",  dut.control_rd, dut.control_rd, dut.data_mem_rd,dut.data_mem_rd);
+    if (dut.control_regfile_we) 
+        $display("\tAction        : MEM_WRITE REG_FILE (%0d) [0x%h] <= (%0d)0x%h",  dut.control_rd, dut.control_rd, dut.data_mem_rd,dut.data_mem_rd);
     else
         $display("\tAction        : ALU_RESULT (%0d) 0x%h => Register (%0d)x%0d", dut.alu_out_addr,dut.alu_out_addr, dut.control_rd, dut.control_rd);
     

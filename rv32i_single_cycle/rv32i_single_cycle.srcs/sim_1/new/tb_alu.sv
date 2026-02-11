@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Osman Yasa
 // 
 // Create Date: 01/31/2026 11:58:57 AM
 // Design Name: 
