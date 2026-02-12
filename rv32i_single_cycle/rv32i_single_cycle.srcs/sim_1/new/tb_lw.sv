@@ -29,17 +29,15 @@ module tb_lw;
     cpu dut(.*);
     
     `include "print_cpu_dashboard.sv"
+    `include "clear_memories.sv"
 
     always #5 clk = ~clk;   // 10ns period 
-    
+
      initial begin
         // --- 1. Memory Initialization ---
-        foreach(dut.mem_inst.mem_arr[i]) dut.mem_inst.mem_arr[i] = 32'h0;
-        foreach(dut.reg_file.mem_arr[i]) dut.reg_file.mem_arr[i] = 32'h0;
-        foreach(dut.mem_data.mem_arr[i]) dut.mem_data.mem_arr[i] = 32'h0;
+        clear_memories();
         clk = 0;
         rst = 1;
-
         @(posedge clk);
         rst = 0; 
         #1 

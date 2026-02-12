@@ -21,10 +21,11 @@ Time resolution is 1 ps
 [MEMORY/WB PHASE]
 	Action        : MEM_READ (994)  [0x000003e2] => (12345)0x00003039
 	Action        : MEM_WRITE REG_FILE (6) [0x06] <= (12345)0x00003039
+	Action        : ALU_RESULT (994) 0x000003e2 => Register (6)x6
 ==================================================
 
 Info: Assertion Passed: mem_arr[6] correctly holds      12345
-Time: 27500 ps  Iteration: 0  Process: /tb_lw/Initial35_11  Scope: tb_lw  File: /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv Line: 65
+Time: 27500 ps  Iteration: 0  Process: /tb_lw/Initial36_14  Scope: tb_lw  File: /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv Line: 63
 Info: Assertion Passed: pc_current       1004 correctly holds 1004
-Time: 27500 ps  Iteration: 0  Process: /tb_lw/Initial35_11  Scope: tb_lw  File: /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv Line: 69
-$finish called at time : 27500 ps : File "/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv" Line 70
+Time: 27500 ps  Iteration: 0  Process: /tb_lw/Initial36_14  Scope: tb_lw  File: /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv Line: 67
+$finish called at time : 27500 ps : File "/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_lw.sv" Line 68

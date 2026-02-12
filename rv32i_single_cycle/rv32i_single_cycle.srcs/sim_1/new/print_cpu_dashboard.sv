@@ -65,7 +65,7 @@ task print_cpu_dashboard();
 
     $display("\n[DECODE PHASE]");
     $display("\tReg Access    : RD1(x%0d)=0x%h, RD2(x%0d)=0x%h", 
-              dut.control_rs1, dut.rd1, dut.control_rs2, dut.rd2);
+              dut.control_rs1, dut.regfile_rd1, dut.control_rs2, dut.regfile_rd2);
     $display("\tImm Decoded   : %0d (0x%h)", $signed(current_imm), current_imm);
 
     $display("\n[EXECUTE PHASE]");
@@ -75,8 +75,10 @@ task print_cpu_dashboard();
     $display("\n[MEMORY/WB PHASE]");
     if (dut.control_opcode == 7'b0000011)
         $display("\tAction        : MEM_READ (%0d)  [0x%h] => (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut.data_mem_rd,dut.data_mem_rd);
-    if (dut.control_regfile_we) 
+    if (dut.control_opcode == 7'b0000011 && dut.control_regfile_we) 
         $display("\tAction        : MEM_WRITE REG_FILE (%0d) [0x%h] <= (%0d)0x%h",  dut.control_rd, dut.control_rd, dut.data_mem_rd,dut.data_mem_rd);
+    if(dut.control_opcode == 7'bb0100011 && dut.control_data_mem_we)
+        $display("\tAction        : MEM_WRITE DATA MEM (%0d) [0x%h] <= (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut._data_mem_wr, dut._data_mem_wr);
     else
         $display("\tAction        : ALU_RESULT (%0d) 0x%h => Register (%0d)x%0d", dut.alu_out_addr,dut.alu_out_addr, dut.control_rd, dut.control_rd);
     
