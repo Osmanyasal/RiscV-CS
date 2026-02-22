@@ -45,17 +45,35 @@ module control_unit(
                 if(control_func3 == 3'b010) begin
                     control_regfile_we = 1'b1;
                     control_data_mem_we = 1'b0; 
-                    control_alu        = 4'b0000; 
                 end
             end 
             
             7'b0100011: begin   // S-type (sw)
                 control_data_mem_we = 1'b1;
-                control_alu        = 4'b0000;
             end 
             
             7'b0110011: begin   // R-type
                 control_regfile_we = 1'b1;
+                if(control_func3 == 3'h0 && control_func7 == 7'h0)  // add 
+                    control_alu = 4'd0;
+                else if(control_func3 == 3'h0 && control_func7 == 7'h20) // sub
+                    control_alu = 4'd1;
+                else if(control_func3 == 3'h4) // xor 
+                    control_alu = 4'd5;
+                else if(control_func3 == 3'h6) // or 
+                    control_alu = 4'd4;
+                else if(control_func3 == 3'h7) // and 
+                    control_alu = 4'd3;
+                else if(control_func3 == 3'h1) // sll
+                    control_alu = 4'd3;
+                else if(control_func3 == 3'h5 && control_func7 = 7'h0) // srl 
+                    control_alu = 4'd8;
+                else if(control_func3 == 3'h5 && control_func7 = 7'h20) // sra 
+                    control_alu = 4'd7;
+                else if(control_func3 == 3'h2) // slt 
+                    control_alu = 4'd9;
+                else if(control_func3 == 3'h3) // sltu 
+                    control_alu = 4'd10;
             end 
             
             7'b1100011: begin   // B-type (beq)

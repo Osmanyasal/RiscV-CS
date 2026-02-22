@@ -120,7 +120,7 @@ module cpu #(
             7'b0000011, 7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; end    // I type
             7'b0100011:             begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_s_type; _data_mem_wr = regfile_rd2; end    // S type    
             7'b1100011:             begin _alu_src_b = control_imm_b_type;end
-            7'b0110111:             begin _alu_src_b = control_imm_u_type;end
+            7'b0110111:             begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2;end   // R Type 
             7'b1101111:             begin _alu_src_b = control_imm_j_type;end
             default:                begin /* empty is fine here since we set at the beginning */ end
         endcase
@@ -142,9 +142,7 @@ module cpu #(
     
     (* dont_touch = "true" *)
     alu #(.WIDTH(WIDTH)) _alu (
-        .alu_control(control_alu),
-        .alu_func3(control_func3),
-        .alu_func7(control_func7),
+        .alu_control(control_alu), 
         .alu_src_a(alu_src_a),
         .alu_src_b(alu_src_b),
         .alu_out(alu_out),

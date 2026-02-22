@@ -52,9 +52,13 @@ module tb_sw;
         dut.control_pc_en = 1'b1;
         @(posedge clk); // it becomes 110
         #1;
-                
-        
         print_cpu_dashboard();
+        
+        @(posedge clk); // writing occurs at the beginning of the next clock cycle.
+        #1;
+        assert(dut.pc_current == 32'd110) else $display("pc is %0d, it should've been 110",dut.pc_current);
+        assert(dut.mem_data.mem_arr[32'h10C] == 32'd10) else $display("Memory wrong: got %0d, expected 10", dut.mem_data.mem_arr[32'h10C]);
+        
     end
 
 endmodule

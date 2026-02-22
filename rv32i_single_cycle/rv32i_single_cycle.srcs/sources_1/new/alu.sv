@@ -20,9 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module alu #(parameter WIDTH = 32)(
-        input logic [3:0] alu_control,              // Changed from alu_opcode
-        input logic [2:0] alu_func3,                // Note: These aren't used in your case yet
-        input logic [6:0] alu_func7,
+        input logic [3:0] alu_control,              // Changed from alu_opcode ,
         input logic signed [WIDTH-1:0] alu_src_a,
         input logic signed [WIDTH-1:0] alu_src_b,
         output logic signed [2*WIDTH-1:0] alu_out,
@@ -35,12 +33,15 @@ module alu #(parameter WIDTH = 32)(
     typedef enum logic [3:0] {
         ALU_ADD = 4'd0,
         ALU_SUB = 4'd1,
-        ALU_MUL = 4'd2,
+        //ALU_MUL = 4'd2,
         ALU_AND = 4'd3,
         ALU_OR  = 4'd4,
         ALU_XOR = 4'd5,
         ALU_SLL = 4'd6, 
-        ALU_SRA = 4'd7  
+        ALU_SRA = 4'd7,
+        ALU_SRL = 4'd8,
+        ALU_SLT = 4'd9,
+        ALU_SLTU = 4'd10
     } alu_op_t;
     
     logic [WIDTH:0] temp_add_sub;
@@ -67,14 +68,16 @@ module alu #(parameter WIDTH = 32)(
                     alu_carry = temp_add_sub[WIDTH];
                     alu_overflow = (alu_src_a[WIDTH-1] != alu_src_b[WIDTH-1]) && 
                                    (result[WIDTH-1] != alu_src_a[WIDTH-1]);
-                end
-
+                end 
                 ALU_MUL: result = alu_src_a * alu_src_b;
                 ALU_AND: result = alu_src_a & alu_src_b;
                 ALU_OR:  result = alu_src_a | alu_src_b;
                 ALU_XOR: result = alu_src_a ^ alu_src_b;
                 ALU_SLL: result = alu_src_a << alu_src_b[4:0];
                 ALU_SRA: result = alu_src_a >>> alu_src_b[4:0];
+                ALU_SRL: result = alu_src_a >> alu_src_b[4:0];
+                ALU_SLT: result = alu_src_a < alu_src_b ? 'd1 : 'd0;
+                ALU_SLTU: result = (unsigned'(alu_src_a) < unsigned'(alu_src_b)) ? 'd1 : 'd0;
                 default: result = '0;
             endcase 
     end
