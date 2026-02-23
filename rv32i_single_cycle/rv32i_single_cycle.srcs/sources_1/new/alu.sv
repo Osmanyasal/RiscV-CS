@@ -33,7 +33,7 @@ module alu #(parameter WIDTH = 32)(
     typedef enum logic [3:0] {
         ALU_ADD = 4'd0,
         ALU_SUB = 4'd1,
-        //ALU_MUL = 4'd2,
+        ALU_MUL = 4'd2,
         ALU_AND = 4'd3,
         ALU_OR  = 4'd4,
         ALU_XOR = 4'd5,
@@ -75,7 +75,7 @@ module alu #(parameter WIDTH = 32)(
                 ALU_XOR: result = alu_src_a ^ alu_src_b;
                 ALU_SLL: result = alu_src_a << alu_src_b[4:0];
                 ALU_SRA: result = alu_src_a >>> alu_src_b[4:0];
-                ALU_SRL: result = alu_src_a >> alu_src_b[4:0];
+                ALU_SRL: result = unsigned'(alu_src_a) >> alu_src_b[4:0];
                 ALU_SLT: result = alu_src_a < alu_src_b ? 'd1 : 'd0;
                 ALU_SLTU: result = (unsigned'(alu_src_a) < unsigned'(alu_src_b)) ? 'd1 : 'd0;
                 default: result = '0;

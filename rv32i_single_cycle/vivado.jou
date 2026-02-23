@@ -3,10 +3,10 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Feb 22 18:55:44 2026
-# Process ID         : 44408
+# Start of session at: Mon Feb 23 11:03:44 2026
+# Process ID         : 41756
 # Current directory  : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent42004 C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent43944 C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.xpr
 # Log file           : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/vivado.log
 # Journal file       : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle\vivado.jou
 # Running On         : rt7-laptop-duo
@@ -19,40 +19,28 @@
 # Host memory        : 33685 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 35833 MB
-# Available Virtual  : 6968 MB
+# Available Virtual  : 4000 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.xpr
 update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_sw [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
 launch_simulation
-source tb_sw.tcl
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_alu.tcl
 close_sim
 launch_simulation
-source tb_sw.tcl
+source tb_alu.tcl
 close_sim
 launch_simulation
-source tb_sw.tcl
-relaunch_sim
-relaunch_sim
+source tb_alu.tcl
 close_sim
 launch_simulation
-source tb_sw.tcl
+source tb_alu.tcl
 close_sim
 launch_simulation
-source tb_sw.tcl
-relaunch_sim
-close_sim
-launch_simulation
-source tb_sw.tcl
-close_sim
-launch_simulation
-source tb_sw.tcl
+source tb_alu.tcl
 relaunch_sim
 close_sim

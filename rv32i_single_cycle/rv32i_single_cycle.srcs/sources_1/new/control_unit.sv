@@ -66,9 +66,9 @@ module control_unit(
                     control_alu = 4'd3;
                 else if(control_func3 == 3'h1) // sll
                     control_alu = 4'd3;
-                else if(control_func3 == 3'h5 && control_func7 = 7'h0) // srl 
+                else if(control_func3 == 3'h5 && control_func7 == 7'h0) // srl 
                     control_alu = 4'd8;
-                else if(control_func3 == 3'h5 && control_func7 = 7'h20) // sra 
+                else if(control_func3 == 3'h5 && control_func7 == 7'h20) // sra 
                     control_alu = 4'd7;
                 else if(control_func3 == 3'h2) // slt 
                     control_alu = 4'd9;

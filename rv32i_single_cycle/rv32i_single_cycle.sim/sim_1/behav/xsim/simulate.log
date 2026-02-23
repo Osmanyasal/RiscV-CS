@@ -1,25 +1,16 @@
 Time resolution is 1 ps
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | S-TYPE (STORE)
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 110
-	Raw Hex       : 0x0064a423
-	Binary Split  : 0000000_00110_01001_010_01000_0100011
-	Field Map     : [imm] [rs2] [rs1] [f3] [imm] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x9)=0x00000104, RD2(x6)=0x0000000a
-	Imm Decoded   : 8 (0x00000008)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(260)=0x00000104, B(8)=0x00000008
-	ALU Result    : (268)0x0000010c
-
-[MEMORY/WB PHASE]
-	Action        : MEM_WRITE DATA MEM (268) [0x0000010c] <= (10)0x0000000a
-==================================================
-
-pc is 114, it should've been 110
+### Starting ALU Testbench ###
+PASS: SUB Zero Check!, Fatality!, Got: 0
+PASS: ADD (15+10), Got: 25
+PASS: SUB (10-20), Got: -10
+PASS: MUL (9999 * 9999), Got: 99980001
+PASS: SLL (1<<4), Got: 16
+PASS: SRA (-16 >>> 2), Got: -4
+PASS: SRL (-16 >> 2), Got: 1073741820
+PASS: SLT (-16 < 2 ?), Got: 1
+PASS: SLT (16 < 2 ?), Got: 0
+PASS: SLTU (1 < 2), Got: 1
+PASS: SLTU (5 < 2), Got: 0
+--- Running Random Vectors ---
+### Testbench Complete ###
+$finish called at time : 175 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_alu.sv" Line 188
