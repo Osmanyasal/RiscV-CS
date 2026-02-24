@@ -31,7 +31,7 @@ module tb_lw;
     `include "print_cpu_dashboard.sv"
     `include "clear_memories.sv"
 
-    always #5 clk = ~clk;   // 10ns period 
+    always begin #5 clk = ~clk; end   // 10ns period 
 
      initial begin
         // --- 1. Memory Initialization ---

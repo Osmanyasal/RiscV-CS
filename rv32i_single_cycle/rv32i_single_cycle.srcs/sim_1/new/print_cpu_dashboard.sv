@@ -70,17 +70,17 @@ task print_cpu_dashboard();
 
     $display("\n[EXECUTE PHASE]");
     $display("\tALU Inputs    : A(%0d)=0x%h, B(%0d)=0x%h", dut.alu_src_a,dut.alu_src_a, dut.alu_src_b,dut.alu_src_b);
-    $display("\tALU Result    : (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr);
+    $display("\tALU Result    : (%0d)0x%h", signed'(dut.alu_out_addr), dut.alu_out_addr);
     
     $display("\n[MEMORY/WB PHASE]");
     if (dut.control_opcode == 7'b0000011)
-        $display("\tAction        : MEM_READ (%0d)  [0x%h] => (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut.data_mem_rd,dut.data_mem_rd);
+        $display("\tAction        : MEM_READ (%0d)  [0x%h] => (%0d)0x%h", signed'(dut.alu_out_addr), dut.alu_out_addr, dut.data_mem_rd,dut.data_mem_rd);
     if (dut.control_opcode == 7'b0000011 && dut.control_regfile_we) 
         $display("\tAction        : MEM_WRITE REG_FILE (%0d) [0x%h] <= (%0d)0x%h",  dut.control_rd, dut.control_rd, dut.data_mem_rd,dut.data_mem_rd);
     if(dut.control_opcode == 7'bb0100011 && dut.control_data_mem_we)
-        $display("\tAction        : MEM_WRITE DATA MEM (%0d) [0x%h] <= (%0d)0x%h", dut.alu_out_addr, dut.alu_out_addr, dut._data_mem_wr, dut._data_mem_wr);
+        $display("\tAction        : MEM_WRITE DATA MEM (%0d) [0x%h] <= (%0d)0x%h", signed'(dut.alu_out_addr), dut.alu_out_addr, dut._data_mem_wr, dut._data_mem_wr);
     else
-        $display("\tAction        : ALU_RESULT (%0d) 0x%h => Register (%0d)x%0d", dut.alu_out_addr,dut.alu_out_addr, dut.control_rd, dut.control_rd);
+        $display("\tAction        : ALU_RESULT (%0d) 0x%h => Register (%0d)x%0d", signed'(dut.alu_out_addr),dut.alu_out_addr, dut.control_rd, dut.control_rd);
     
     $display("==================================================\n");
 endtask
