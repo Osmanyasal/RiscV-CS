@@ -108,20 +108,21 @@ module cpu #(
     logic [WIDTH-1:0] _alu_src_b;
     logic [WIDTH-1:0] _data_mem_wr;
     logic [WIDTH-1:0] regfile_rd1, regfile_rd2, data_mem_rd;    // output comes from reg file and data memory read op.
-    
+    logic [WIDTH-1:0] regfile_wd3;
     (* dont_touch = "true" *)
-    regfile reg_file(.clk(clk), .rst(rst), .a1(control_rs1), .a2(control_rs2), .a3(control_rd), .wd3(data_mem_rd), .we(control_regfile_we), .rd1(regfile_rd1), .rd2(regfile_rd2));
+    regfile reg_file(.clk(clk), .rst(rst), .a1(control_rs1), .a2(control_rs2), .a3(control_rd), .wd3(regfile_wd3), .we(control_regfile_we), .rd1(regfile_rd1), .rd2(regfile_rd2));
     
     always_comb begin
         _alu_src_a = 'h0;
         _alu_src_b = 'h0;
         _data_mem_wr = 'h0;
+        regfile_wd3 = 'h0;
         case(control_opcode)
-            7'b0000011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; end    // I type
-            7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; end   // R Type
-            7'b0100011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_s_type; _data_mem_wr = regfile_rd2; end    // S type    
+            7'b0000011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; regfile_wd3 = data_mem_rd; end    // I type
+            7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; end   // I Type
+            7'b0100011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_s_type; _data_mem_wr = regfile_rd2; regfile_wd3 = data_mem_rd; end    // S type    
             7'b1100011: begin _alu_src_b = control_imm_b_type;end
-            7'b0110011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2;end   // U Type 
+            7'b0110011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; regfile_wd3 = alu_out_addr;  end   // R Type 
             7'b1101111: begin _alu_src_b = control_imm_j_type;end
             default:    begin /* empty is fine here since we set at the beginning */ end
         endcase

@@ -22,16 +22,38 @@ Time resolution is 1 ps
 	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
 ==================================================
 
-ADD fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 9
+	Raw Hex       : 0x40628233
+	Binary Split  : 0100000_00110_00101_000_00100_0110011
+	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
+	Imm Decoded   : 0 (0x00000000)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
+	ALU Result    : (-4)0xfffffffc
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT (-4) 0xfffffffc => Register (4)x4
+==================================================
+
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 10
+	Raw Hex       : 0x02628233
+	Binary Split  : 0000001_00110_00101_000_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -46,16 +68,16 @@ ADD fail: got 0
 	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
 ==================================================
 
-SUB fail: got 0
+MUL fail: got 16
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 11
+	Raw Hex       : 0x0062f233
+	Binary Split  : 0000000_00110_00101_111_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -64,22 +86,21 @@ SUB fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (2)0x00000002
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
 ==================================================
 
-MUL fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 12
+	Raw Hex       : 0x0062e233
+	Binary Split  : 0000000_00110_00101_110_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -88,22 +109,21 @@ MUL fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (14)0x0000000e
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (14) 0x0000000e => Register (4)x4
 ==================================================
 
-AND fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 13
+	Raw Hex       : 0x0062c233
+	Binary Split  : 0000000_00110_00101_100_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -112,22 +132,21 @@ AND fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (12)0x0000000c
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (12) 0x0000000c => Register (4)x4
 ==================================================
 
-OR fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 14
+	Raw Hex       : 0x00629233
+	Binary Split  : 0000000_00110_00101_001_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -136,22 +155,22 @@ OR fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (2)0x00000002
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
 ==================================================
 
-XOR fail: got 0
+SLL fail: got 2
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 15
+	Raw Hex       : 0x4062d233
+	Binary Split  : 0100000_00110_00101_101_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -160,22 +179,21 @@ XOR fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (0)0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
 ==================================================
 
-SLL fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | R-TYPE
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
+	PC Current    : 16
+	Raw Hex       : 0x0062d233
+	Binary Split  : 0000000_00110_00101_101_00100_0110011
 	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
 
 [DECODE PHASE]
@@ -184,13 +202,57 @@ SLL fail: got 0
 
 [EXECUTE PHASE]
 	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Result    : (0)0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
 ==================================================
 
-SLT fail: got 0
-SLTU fail: got 0
---- All R-Type Tests Completed ---
-$finish called at time : 116 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" Line 95
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 17
+	Raw Hex       : 0x0062a233
+	Binary Split  : 0000000_00110_00101_010_00100_0110011
+	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
+	Imm Decoded   : 0 (0x00000000)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
+	ALU Result    : (1)0x00000001
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
+==================================================
+
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 18
+	Raw Hex       : 0x0062b233
+	Binary Split  : 0000000_00110_00101_011_00100_0110011
+	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
+	Imm Decoded   : 0 (0x00000000)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
+	ALU Result    : (1)0x00000001
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
+==================================================
+
+--- All R-Type Tests Completed with 2 errors ---
+$finish called at time : 116 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" Line 120
