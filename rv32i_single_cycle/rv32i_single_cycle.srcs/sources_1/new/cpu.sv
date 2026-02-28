@@ -77,11 +77,10 @@ module cpu #(
         .next_pc(next_pc), 
         .pc(pc_current)     
     );
-    assign next_pc = pc_current + 32'd1;
     
-    //** FETCH STAGE  **//
+    
+    //** FETCH STAGE  **// 
     logic [WIDTH-1:0] inst_out;
-    
     (* dont_touch = "true" *)
     memory_instruction#(
     .WIDTH(WIDTH), 
@@ -98,8 +97,8 @@ module cpu #(
     assign control_func7 = inst_out[31:25];
     
     assign control_imm_i_type = { {20{inst_out[31]}}, inst_out[31:20] };
-    assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7] };
-    assign control_imm_b_type = { {19{inst_out[31]}}, inst_out[31], inst_out[7], inst_out[30:25], inst_out[11:8], 1'b0 };
+    assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7]};
+    assign control_imm_b_type = { {20{inst_out[31]}},inst_out[7], inst_out[30:25], inst_out[11:8], 1'b0};
     assign control_imm_u_type = { inst_out[31:12], 12'b0 };
     assign control_imm_j_type = { {11{inst_out[31]}}, inst_out[31], inst_out[19:12], inst_out[20], inst_out[30:21], 1'b0 };
     
@@ -162,4 +161,7 @@ module cpu #(
     memory_data #(.WIDTH(WIDTH), .ADDR_LOG(10)) mem_data (.clk(clk), .addr(alu_out_addr), .we(control_data_mem_we), .write_data(_data_mem_wr), .read_data(data_mem_rd));
     
     assign pc_debug = pc_current;
+    
+    assign next_pc = (control_opcode == 7'b1100011) ? pc_current + control_imm_b_type : pc_current + 32'd1;
+
 endmodule

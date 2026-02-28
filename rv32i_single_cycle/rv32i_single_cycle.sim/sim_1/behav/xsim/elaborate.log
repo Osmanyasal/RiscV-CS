@@ -1,11 +1,11 @@
 Vivado Simulator v2025.1.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_btype_behav xil_defaultlib.tb_btype xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:162]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:161]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -17,6 +17,6 @@ Compiling module xil_defaultlib.regfile
 Compiling module xil_defaultlib.alu
 Compiling module xil_defaultlib.memory_data_default
 Compiling module xil_defaultlib.cpu
-Compiling module xil_defaultlib.tb_rtype
+Compiling module xil_defaultlib.tb_btype
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_rtype_behav
+Built simulation snapshot tb_btype_behav

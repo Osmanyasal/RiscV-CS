@@ -52,66 +52,68 @@ module tb_rtype;
 
         // ADD (Expected: 16)
         print_cpu_dashboard();
+        $display("ADD (Expected: 16)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd16)
         else begin fail_counter +=1; $display("ADD fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SUB (Expected: -4 = 0xFFFF_FFFC)
         print_cpu_dashboard();
+        $display("SUB (Expected: -4 = 0xFFFF_FFFC)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'hFFFF_FFFC)
         else begin fail_counter +=1; $display("SUB fail: got %0h", dut.reg_file.mem_arr[4]); end
         
-        // MUL (Expected: 60)
         print_cpu_dashboard();
+        $display("MUL (Expected: 60)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd60)
         else begin fail_counter +=1; $display("MUL fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // AND (Expected: 2)
         print_cpu_dashboard();
+        $display("AND (Expected: 2)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd2)
         else begin fail_counter +=1; $display("AND fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // OR (Expected: 14)
         print_cpu_dashboard();
+        $display("OR (Expected: 14)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd14)
         else begin fail_counter +=1; $display("OR fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // XOR (Expected: 12)
         print_cpu_dashboard();
+        $display("XOR (Expected: 12)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd12)
         else begin fail_counter +=1; $display("XOR fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SLL (Expected: 6144)
         print_cpu_dashboard();
+        $display("SLL (Expected: 6144)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd6144)
         else begin fail_counter +=1; $display("SLL fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SRA (Expected: 0)
         print_cpu_dashboard();
+        $display("SRA (Expected: 0)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd0)
         else begin fail_counter +=1; $display("SRA fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SRL (Expected: 0)
         print_cpu_dashboard();
+        $display("SRL (Expected: 0)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd0)
         else begin fail_counter +=1; $display("SRL fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SLT (Expected: 1)
         print_cpu_dashboard();
+        $display("SLT (Expected: 1)");
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd1)
         else begin fail_counter +=1; $display("SLT fail: got %0d", dut.reg_file.mem_arr[4]); end
         
-        // SLTU (Expected: 1)
-        print_cpu_dashboard();
+        print_cpu_dashboard(); 
+        $display("SLTU (Expected: 1)");
+
         @(posedge clk); #1;
         assert(dut.reg_file.mem_arr[4] == 32'd1)
         else begin fail_counter +=1; $display("SLTU fail: got %0d", dut.reg_file.mem_arr[4]); end
