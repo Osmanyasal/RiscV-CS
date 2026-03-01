@@ -16,8 +16,8 @@ Time resolution is 1 ps
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 8 (PC + -12)
@@ -40,8 +40,8 @@ PASS [BEQ_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0x0000000a, B=0x00000001
+	ALU Result    : (11) 0x0000000b
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 12 (PC + -12)
@@ -64,8 +64,8 @@ PASS [BNE_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 16 (PC + -12)
@@ -88,8 +88,8 @@ PASS [BNE_NOT_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0xffffffff, B=0x00000001
+	ALU Result    : (-2) 0xfffffffe
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 20 (PC + -12)
@@ -112,8 +112,8 @@ PASS [BLT_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0x0000000a, B=0xffffffff
+	ALU Result    : (11) 0x0000000b
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 24 (PC + -12)
@@ -136,8 +136,8 @@ PASS [BGE_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0x00000001, B=0xffffffff
+	ALU Result    : (2) 0x00000002
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 28 (PC + -12)
@@ -160,8 +160,8 @@ PASS [BLTU_TAKEN]
 	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000000, B=0xfffffff4
-	ALU Result    : (-12) 0xfffffff4
+	ALU Inputs    : A=0xffffffff, B=0x0000000a
+	ALU Result    : (-11) 0xfffffff5
 
 [MEMORY/WB PHASE]
 	Action        : BRANCH Target = 32 (PC + -12)

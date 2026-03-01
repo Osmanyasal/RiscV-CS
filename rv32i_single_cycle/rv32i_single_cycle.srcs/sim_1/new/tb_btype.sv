@@ -80,8 +80,8 @@ module tb_btype;
         // BNE (Branch if Not Equal): 10 != 1 -> Take branch to 12
         check_branch("BNE_TAKEN",     24, 32'hFE409AE3, 32'd12);
         
-        // BNE (Branch if Not Equal): 10 == 10 -> Do NOT take branch (PC + 4 = 32)
-        check_branch("BNE_NOT_TAKEN", 28, 32'hFE209AE3, 32'd16);
+        // BNE (Branch if Not Equal): 10 == 10 -> Do NOT take branch (PC + 1 = 29)
+        check_branch("BNE_NOT_TAKEN", 28, 32'hFE209AE3, 32'd29);
 
         // BLT (Branch Less Than - Signed): -1 < 1 -> Take branch to 20
         check_branch("BLT_TAKEN",     32, 32'hFE41CAE3, 32'd20);

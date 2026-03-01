@@ -77,7 +77,18 @@ module control_unit(
             end 
             
             7'b1100011: begin   // B-type (beq)
-                // Branch logic here
+                if(control_func3 == 32'h0)  // rs1 == rs2
+                    control_alu = 32'd1;    // sub == 0 ?
+                else if(control_func3 == 32'h1) // rs1 != rs2
+                    control_alu = 32'd5;    // xor
+                else if(control_func3 == 32'h4) // rs1 < rs2
+                    control_alu = 32'd1;
+                else if(control_func3 == 32'h5) // rs1 >= rs2
+                    control_alu = 32'd1;
+                else if(control_func3 == 32'h6) // rs1 < rs2
+                    control_alu = 32'd1;
+                else if(control_func3 == 32'h7) // rs1 >= rs2
+                    control_alu = 32'd1;
             end
 
             default: begin

@@ -109,6 +109,8 @@ module cpu(
     logic [WIDTH-1:0] regfile_rd1, regfile_rd2, data_mem_rd;    // output comes from reg file and data memory read op.
     logic [WIDTH-1:0] regfile_wd3;
     logic [WIDTH-1:0] alu_out_addr;
+    logic branch_taken;
+    
     (* dont_touch = "true" *)
     regfile reg_file(.clk(clk), .rst(rst), .a1(control_rs1), .a2(control_rs2), .a3(control_rd), .wd3(regfile_wd3), .we(control_regfile_we), .rd1(regfile_rd1), .rd2(regfile_rd2));
     
@@ -116,12 +118,29 @@ module cpu(
         _alu_src_a = 'h0;
         _alu_src_b = 'h0;
         _data_mem_wr = 'h0;
-        regfile_wd3 = 'h0;
+        regfile_wd3 = 'h0; 
         case(control_opcode)
             7'b0000011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; regfile_wd3 = data_mem_rd; end    // I type
             7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; end   // I Type
-            7'b0100011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_s_type; _data_mem_wr = regfile_rd2; regfile_wd3 = data_mem_rd; end    // S type    
-            7'b1100011: begin _alu_src_b = control_imm_b_type;end
+            7'b0100011: begin   // S type
+                _alu_src_a = regfile_rd1; 
+                _alu_src_b = control_imm_s_type; 
+                regfile_wd3 = data_mem_rd;
+                _data_mem_wr = data_mem_rd;
+                if (control_func3 == 32'h02) begin   
+                    _data_mem_wr[31:0] = regfile_rd2[31:0];  
+                end
+                else if (control_func3 == 32'h01) begin 
+                    _data_mem_wr[15:0] = regfile_rd2[15:0]; 
+                end
+                else begin  // 00 
+                    _data_mem_wr[7:0] = regfile_rd2[7:0]; 
+                end
+            end   
+            7'b1100011: begin   // B type
+                _alu_src_a = regfile_rd1;   
+                _alu_src_b = regfile_rd2;  
+           end
             7'b0110011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; regfile_wd3 = alu_out_addr;  end   // R Type 
             7'b1101111: begin _alu_src_b = control_imm_j_type;end
             default:    begin /* empty is fine here since we set at the beginning */ end
@@ -153,15 +172,32 @@ module cpu(
         .alu_negative(alu_negative),
         .alu_carry(alu_carry)
     );
-    
+     
     //** WRITE BACK STAGE **// 
     assign alu_out_addr = alu_out[WIDTH-1:0];
+    logic branch_taken;
+    always_comb begin
+        branch_taken = 1'b0;
+        if (control_opcode == 7'b1100011) begin
+            if(control_func3 == 32'h0)  // rs1 == rs2
+                branch_taken = alu_zero;
+            else if(control_func3 == 32'h1) // rs1 != rs2
+                branch_taken = ~alu_zero;
+            else if(control_func3 == 32'h4) // rs1 < rs2
+                branch_taken = alu_negative;
+            else if(control_func3 == 32'h5) // rs1 >= rs2
+                branch_taken = ~alu_negative;
+            else if(control_func3 == 32'h6) // u(rs1) < u(rs2)
+                branch_taken = ~alu_out[0];
+            else if(control_func3 == 32'h7) // u(rs1) >= u(rs2)
+                branch_taken = alu_out[0];
+        end
+    end
     
     (* dont_touch = "true" *)
     memory_data #(.WIDTH(WIDTH), .ADDR_LOG(10)) mem_data (.clk(clk), .addr(alu_out_addr), .we(control_data_mem_we), .write_data(_data_mem_wr), .read_data(data_mem_rd));
     
     assign pc_debug = pc_current;
-    
-    assign next_pc = (control_opcode == 7'b1100011) ? pc_current + control_imm_b_type : pc_current + 32'd1;
+    assign next_pc = (branch_taken) ? pc_current + control_imm_b_type : pc_current + 32'd1;
 
 endmodule
