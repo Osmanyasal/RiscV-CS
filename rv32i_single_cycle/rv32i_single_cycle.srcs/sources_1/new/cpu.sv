@@ -21,14 +21,14 @@
 
 (* keep_hierarchy = "yes" *)
 (* dont_touch = "true" *)
-module cpu #(
-    parameter WIDTH = 32
-)(
+module cpu(
     input logic clk, 
     input logic rst,
     
-    output logic [WIDTH-1:0] pc_debug
+    output logic [31:0] pc_debug
 );
+    localparam WIDTH = 32;
+    
     //** CONTROL UNIT **//
     
     // Instruction segments
@@ -108,6 +108,7 @@ module cpu #(
     logic [WIDTH-1:0] _data_mem_wr;
     logic [WIDTH-1:0] regfile_rd1, regfile_rd2, data_mem_rd;    // output comes from reg file and data memory read op.
     logic [WIDTH-1:0] regfile_wd3;
+    logic [WIDTH-1:0] alu_out_addr;
     (* dont_touch = "true" *)
     regfile reg_file(.clk(clk), .rst(rst), .a1(control_rs1), .a2(control_rs2), .a3(control_rd), .wd3(regfile_wd3), .we(control_regfile_we), .rd1(regfile_rd1), .rd2(regfile_rd2));
     
@@ -153,8 +154,7 @@ module cpu #(
         .alu_carry(alu_carry)
     );
     
-    //** WRITE BACK STAGE **//
-    logic [WIDTH-1:0] alu_out_addr;
+    //** WRITE BACK STAGE **// 
     assign alu_out_addr = alu_out[WIDTH-1:0];
     
     (* dont_touch = "true" *)
