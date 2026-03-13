@@ -160,14 +160,13 @@ ANDI (Expected: 12)
 
 [EXECUTE PHASE]
 	ALU Inputs    : A=0x0000000c, B=0x00000002
-	ALU Result    : (0) 0x00000000
+	ALU Result    : (48) 0x00000030
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT 0x00000000 -> x4
+	Action        : ALU_RESULT 0x00000030 -> x4
 ==================================================
 
 SLLI (Expected: 48)
-SLLI fail: got 0
 
 ==================================================
       RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
@@ -216,5 +215,5 @@ SRLI (Expected: 3)
 ==================================================
 
 SRAI (Expected: -4 = 0xFFFF_FFFC)
---- All I-Type Tests Completed with 1 errors ---
+--- All I-Type Tests Completed with 0 errors ---
 $finish called at time : 96 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_itype.sv" Line 133

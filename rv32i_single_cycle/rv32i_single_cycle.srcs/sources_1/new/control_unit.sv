@@ -57,7 +57,7 @@ module control_unit(
                  else if(control_func3 == 3'h7) // andi 
                     control_alu = 4'd3;
                  else if(control_func3 == 3'h1 && control_func7 == 7'h0) // slli
-                    control_alu = 4'd3;
+                    control_alu = 4'd6;
                  else if(control_func3 == 3'h5 && control_func7 == 7'h0) // srli 
                     control_alu = 4'd8;
                  else if(control_func3 == 3'h5 && control_func7 == 7'h20) // sraii 
