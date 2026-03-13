@@ -94,14 +94,15 @@ module cpu(
     assign control_func3 = inst_out[14:12]; 
     assign control_rs1 = inst_out[19:15];
     assign control_rs2 = inst_out[24:20];
-    assign control_func7 = inst_out[31:25];
     
-    assign control_imm_i_type = { {20{inst_out[31]}}, inst_out[31:20] };
+    assign control_imm_i_type = (control_func3 == 3'h5) ? { {20{inst_out[31]}}, inst_out[31:20] } : { 20'd0, inst_out[31:20] };
     assign control_imm_s_type = { {20{inst_out[31]}}, inst_out[31:25], inst_out[11:7]};
     assign control_imm_b_type = { {20{inst_out[31]}},inst_out[7], inst_out[30:25], inst_out[11:8], 1'b0};
     assign control_imm_u_type = { inst_out[31:12], 12'b0 };
     assign control_imm_j_type = { {11{inst_out[31]}}, inst_out[31], inst_out[19:12], inst_out[20], inst_out[30:21], 1'b0 };
     
+    assign control_func7 = control_opcode == 7'b0010011 ? control_imm_i_type[11:5] : inst_out[31:25];
+
     //** EXECUTE STAGE (ALU) **//
     logic [WIDTH-1:0] _alu_src_a;
     logic [WIDTH-1:0] _alu_src_b;
@@ -121,7 +122,7 @@ module cpu(
         regfile_wd3 = 'h0; 
         case(control_opcode)
             7'b0000011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; regfile_wd3 = data_mem_rd; end    // I type
-            7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = regfile_rd2; end   // I Type
+            7'b0010011: begin _alu_src_a = regfile_rd1; _alu_src_b = control_imm_i_type; regfile_wd3 = alu_out_addr; end   // I Type
             7'b0100011: begin   // S type
                 _alu_src_a = regfile_rd1; 
                 _alu_src_b = control_imm_s_type; 

@@ -42,11 +42,9 @@ module tb_rtype;
  
         
         // Start PC at 28. The next fetch will increment to 32 (ADD).
-        force dut.pc_current = 32'd8; 
-        force dut.control_pc_en = 1'b1; 
+        force dut.pc_current = 32'd8;  
         #1
-        release dut.pc_current;
-        release dut.control_pc_en;
+        release dut.pc_current; 
         
         // --- 4. EXECUTE AND ASSERT ---
 

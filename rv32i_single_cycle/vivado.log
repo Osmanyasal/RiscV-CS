@@ -3,10 +3,10 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Feb 26 12:21:17 2026
-# Process ID         : 55120
+# Start of session at: Sun Mar  1 19:00:35 2026
+# Process ID         : 39820
 # Current directory  : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent62772 C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent27964 C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.xpr
 # Log file           : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/vivado.log
 # Journal file       : C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle\vivado.jou
 # Running On         : rt7-laptop-duo
@@ -17,9 +17,9 @@
 # CPU Physical cores : 16
 # CPU Logical cores  : 16
 # Host memory        : 33685 MB
-# Swap memory        : 4226 MB
-# Total Virtual      : 37911 MB
-# Available Virtual  : 3721 MB
+# Swap memory        : 3842 MB
+# Total Virtual      : 37527 MB
+# Available Virtual  : 5504 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.xpr
@@ -91,40 +91,40 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/dat
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_rtype'
+INFO: [Vivado 12-12493] Simulation top is 'tb_btype'
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtype' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_btype' in fileset 'sim_1'...
 INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
 INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj tb_rtype_vlog.prj"
+"xvlog --incr --relax -L uvm -prj tb_btype_vlog.prj"
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_btype_behav xil_defaultlib.tb_btype xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2025.1.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_btype_behav xil_defaultlib.tb_btype xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:162]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:198]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_rtype_behav -key {Behavioral:sim_1:Functional:tb_rtype} -tclbatch {tb_rtype.tcl} -log {simulate.log}"
+   with args "tb_btype_behav -key {Behavioral:sim_1:Functional:tb_btype} -tclbatch {tb_btype.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-source tb_rtype.tcl
+source tb_btype.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -135,971 +135,210 @@ source tb_rtype.tcl
 #   }
 # }
 # run 1000ns
+--- Starting B-Type Instruction Tests ---
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
-==================================================
-
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 9
-	Raw Hex       : 0x40628233
-	Binary Split  : 0100000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 20
+	Raw Hex       : 0xfe208ae3
+	Binary Split  : 1_111111_00010_00001_000_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x1)=0x0000000a, RD2(x2)=0x0000000a
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (-4)0xfffffffc
+	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (-4) 0xfffffffc => Register (4)x4
+	Action        : BRANCH Target = 8 (PC + -12)
 ==================================================
 
+PASS [BEQ_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 10
-	Raw Hex       : 0x02628233
-	Binary Split  : 0000001_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 24
+	Raw Hex       : 0xfe409ae3
+	Binary Split  : 1_111111_00100_00001_001_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x1)=0x0000000a, RD2(x4)=0x00000001
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
+	ALU Inputs    : A=0x0000000a, B=0x00000001
+	ALU Result    : (11) 0x0000000b
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
+	Action        : BRANCH Target = 12 (PC + -12)
 ==================================================
 
-MUL fail: got 16
+PASS [BNE_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 11
-	Raw Hex       : 0x0062f233
-	Binary Split  : 0000000_00110_00101_111_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 28
+	Raw Hex       : 0xfe209ae3
+	Binary Split  : 1_111111_00010_00001_001_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x1)=0x0000000a, RD2(x2)=0x0000000a
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
+	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
+	Action        : BRANCH Target = 16 (PC + -12)
 ==================================================
 
+PASS [BNE_NOT_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 12
-	Raw Hex       : 0x0062e233
-	Binary Split  : 0000000_00110_00101_110_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 32
+	Raw Hex       : 0xfe41cae3
+	Binary Split  : 1_111111_00100_00011_100_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x3)=0xffffffff, RD2(x4)=0x00000001
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (14)0x0000000e
+	ALU Inputs    : A=0xffffffff, B=0x00000001
+	ALU Result    : (-2) 0xfffffffe
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (14) 0x0000000e => Register (4)x4
+	Action        : BRANCH Target = 20 (PC + -12)
 ==================================================
 
+PASS [BLT_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 13
-	Raw Hex       : 0x0062c233
-	Binary Split  : 0000000_00110_00101_100_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 36
+	Raw Hex       : 0xfe30dae3
+	Binary Split  : 1_111111_00011_00001_101_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x1)=0x0000000a, RD2(x3)=0xffffffff
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (12)0x0000000c
+	ALU Inputs    : A=0x0000000a, B=0xffffffff
+	ALU Result    : (11) 0x0000000b
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (12) 0x0000000c => Register (4)x4
+	Action        : BRANCH Target = 24 (PC + -12)
 ==================================================
 
+PASS [BGE_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 14
-	Raw Hex       : 0x00629233
-	Binary Split  : 0000000_00110_00101_001_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 40
+	Raw Hex       : 0xfe326ae3
+	Binary Split  : 1_111111_00011_00100_110_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x4)=0x00000001, RD2(x3)=0xffffffff
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
+	ALU Inputs    : A=0x00000001, B=0xffffffff
+	ALU Result    : (2) 0x00000002
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
+	Action        : BRANCH Target = 28 (PC + -12)
 ==================================================
 
-SLL fail: got 2
+PASS [BLTU_TAKEN]
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
+      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 15
-	Raw Hex       : 0x4062d233
-	Binary Split  : 0100000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
+	PC Current    : 44
+	Raw Hex       : 0xfe11fae3
+	Binary Split  : 1_111111_00001_00011_111_1010_1_1100011
+	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
+	Reg Access    : RD1(x3)=0xffffffff, RD2(x1)=0x0000000a
+	Imm Decoded   : -12 (0xfffffff4)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
+	ALU Inputs    : A=0xffffffff, B=0x0000000a
+	ALU Result    : (-11) 0xfffffff5
 
 [MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
+	Action        : BRANCH Target = 32 (PC + -12)
 ==================================================
 
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 16
-	Raw Hex       : 0x0062d233
-	Binary Split  : 0000000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
-==================================================
-
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 17
-	Raw Hex       : 0x0062a233
-	Binary Split  : 0000000_00110_00101_010_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 18
-	Raw Hex       : 0x0062b233
-	Binary Split  : 0000000_00110_00101_011_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
---- All R-Type Tests Completed with 2 errors ---
-$finish called at time : 116 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" Line 120
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtype_behav' loaded.
+PASS [BGEU_TAKEN]
+--- All B-Type Tests Completed with 0 errors ---
+$finish called at time : 76 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_btype.sv" Line 99
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_btype_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1849.051 ; gain = 10.945
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2013.965 ; gain = 13.520
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/utils_1/imports/synth_1/cpu.dcp with file C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/cpu.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sim_1\new\tb_btype.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sim_1\new\tb_btype.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sim_1\new\tb_btype.sv:]
+launch_runs synth_1 -jobs 8
+[Sun Mar  1 19:01:18 2026] Launched synth_1...
+Run output will be captured here: C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/runme.log
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sim_1\new\tb_rtype.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sim_1\new\tb_rtype.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\osmya\Desktop\RiscV-CS\rv32i_single_cycle\rv32i_single_cycle.srcs\sources_1\new\cpu.sv:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_rtype'
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtype' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
-INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj tb_rtype_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/alu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/control_unit.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module control_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpu
-WARNING: [VRFC 10-3380] identifier 'alu_out_addr' is used before its declaration [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:125]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_data.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memory_data
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_instruction.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memory_instruction
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_rtype
-WARNING: [VRFC 10-8497] literal value 'bb0100011 truncated to fit in 7 bits [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/print_cpu_dashboard.sv:80]
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2025.1.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:162]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.control_unit
-Compiling module xil_defaultlib.pc
-Compiling module xil_defaultlib.memory_instruction_default
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.memory_data_default
-Compiling module xil_defaultlib.cpu
-Compiling module xil_defaultlib.tb_rtype
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_rtype_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_rtype_behav -key {Behavioral:sim_1:Functional:tb_rtype} -tclbatch {tb_rtype.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_rtype.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-ADD (Expected: 16)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
-==================================================
-
-SUB (Expected: -4 = 0xFFFF_FFFC)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 9
-	Raw Hex       : 0x40628233
-	Binary Split  : 0100000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (-4)0xfffffffc
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (-4) 0xfffffffc => Register (4)x4
-==================================================
-
-MUL (Expected: 60)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 10
-	Raw Hex       : 0x02628233
-	Binary Split  : 0000001_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
-==================================================
-
-MUL fail: got 16
-AND (Expected: 2)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 11
-	Raw Hex       : 0x0062f233
-	Binary Split  : 0000000_00110_00101_111_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
-==================================================
-
-OR (Expected: 14)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 12
-	Raw Hex       : 0x0062e233
-	Binary Split  : 0000000_00110_00101_110_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (14)0x0000000e
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (14) 0x0000000e => Register (4)x4
-==================================================
-
-XOR (Expected: 12)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 13
-	Raw Hex       : 0x0062c233
-	Binary Split  : 0000000_00110_00101_100_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (12)0x0000000c
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (12) 0x0000000c => Register (4)x4
-==================================================
-
-SLL (Expected: 6144)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 14
-	Raw Hex       : 0x00629233
-	Binary Split  : 0000000_00110_00101_001_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
-==================================================
-
-SLL fail: got 2
-SRA (Expected: 0)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 15
-	Raw Hex       : 0x4062d233
-	Binary Split  : 0100000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
-==================================================
-
-SRL (Expected: 0)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 16
-	Raw Hex       : 0x0062d233
-	Binary Split  : 0000000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
-==================================================
-
-SLT (Expected: 1)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 17
-	Raw Hex       : 0x0062a233
-	Binary Split  : 0000000_00110_00101_010_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
-SLTU (Expected: 1)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 18
-	Raw Hex       : 0x0062b233
-	Binary Split  : 0000000_00110_00101_011_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
---- All R-Type Tests Completed with 2 errors ---
-$finish called at time : 116 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" Line 121
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtype_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_rtype'
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtype' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
-INFO: [SIM-utils-43] Exported 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim/instructions.mem'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj tb_rtype_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/alu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/control_unit.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module control_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpu
-WARNING: [VRFC 10-3380] identifier 'alu_out_addr' is used before its declaration [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:125]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_data.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memory_data
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_instruction.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memory_instruction
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pc
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/regfile.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_rtype
-WARNING: [VRFC 10-8497] literal value 'bb0100011 truncated to fit in 7 bits [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/print_cpu_dashboard.sv:80]
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2025.1.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_rtype_behav xil_defaultlib.tb_rtype xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addr' [C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv:162]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.control_unit
-Compiling module xil_defaultlib.pc
-Compiling module xil_defaultlib.memory_instruction_default
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.memory_data_default
-Compiling module xil_defaultlib.cpu
-Compiling module xil_defaultlib.tb_rtype
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_rtype_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_rtype_behav -key {Behavioral:sim_1:Functional:tb_rtype} -tclbatch {tb_rtype.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_rtype.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 8
-	Raw Hex       : 0x00628233
-	Binary Split  : 0000000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
-==================================================
-
-ADD (Expected: 16)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 9
-	Raw Hex       : 0x40628233
-	Binary Split  : 0100000_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (-4)0xfffffffc
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (-4) 0xfffffffc => Register (4)x4
-==================================================
-
-SUB (Expected: -4 = 0xFFFF_FFFC)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 10
-	Raw Hex       : 0x02628233
-	Binary Split  : 0000001_00110_00101_000_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (16)0x00000010
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (16) 0x00000010 => Register (4)x4
-==================================================
-
-MUL (Expected: 60)
-MUL fail: got 16
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 11
-	Raw Hex       : 0x0062f233
-	Binary Split  : 0000000_00110_00101_111_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
-==================================================
-
-AND (Expected: 2)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 12
-	Raw Hex       : 0x0062e233
-	Binary Split  : 0000000_00110_00101_110_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (14)0x0000000e
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (14) 0x0000000e => Register (4)x4
-==================================================
-
-OR (Expected: 14)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 13
-	Raw Hex       : 0x0062c233
-	Binary Split  : 0000000_00110_00101_100_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (12)0x0000000c
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (12) 0x0000000c => Register (4)x4
-==================================================
-
-XOR (Expected: 12)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 14
-	Raw Hex       : 0x00629233
-	Binary Split  : 0000000_00110_00101_001_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (2)0x00000002
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (2) 0x00000002 => Register (4)x4
-==================================================
-
-SLL (Expected: 6144)
-SLL fail: got 2
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 15
-	Raw Hex       : 0x4062d233
-	Binary Split  : 0100000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
-==================================================
-
-SRA (Expected: 0)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 16
-	Raw Hex       : 0x0062d233
-	Binary Split  : 0000000_00110_00101_101_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (0)0x00000000
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (0) 0x00000000 => Register (4)x4
-==================================================
-
-SRL (Expected: 0)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 17
-	Raw Hex       : 0x0062a233
-	Binary Split  : 0000000_00110_00101_010_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
-SLT (Expected: 1)
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | R-TYPE
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 18
-	Raw Hex       : 0x0062b233
-	Binary Split  : 0000000_00110_00101_011_00100_0110011
-	Field Map     : [ f7 ] [rs2] [rs1] [f3] [rd ] [ opcode ]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x5)=0x00000006, RD2(x6)=0x0000000a
-	Imm Decoded   : 0 (0x00000000)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A(6)=0x00000006, B(10)=0x0000000a
-	ALU Result    : (1)0x00000001
-
-[MEMORY/WB PHASE]
-	Action        : ALU_RESULT (1) 0x00000001 => Register (4)x4
-==================================================
-
-SLTU (Expected: 1)
---- All R-Type Tests Completed with 2 errors ---
-$finish called at time : 116 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_rtype.sv" Line 122
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtype_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2030.793 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 440 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2127.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 128 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 128 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2531.613 ; gain = 517.648
+close_design
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 26 12:30:54 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  1 19:03:07 2026...

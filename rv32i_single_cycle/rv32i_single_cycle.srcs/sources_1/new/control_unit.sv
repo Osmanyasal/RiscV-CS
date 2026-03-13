@@ -41,12 +41,34 @@ module control_unit(
         control_pc_en       = 1'b1; // Default PC increment
 
         case(control_opcode)
-            7'b0000011: begin   // I-type (e.g., Load)
-                if(control_func3 == 3'b010) begin
-                    control_regfile_we = 1'b1;
-                    control_data_mem_we = 1'b0; 
-                end
+            7'b0000011: begin   // I-type (e.g., Load, addi, subi)
+                control_regfile_we = 1'b1;
+                control_data_mem_we = 1'b0; 
             end 
+            7'b0010011: begin   // I-type (e.g., addi, subi)
+                control_regfile_we = 1'b1;
+                control_data_mem_we = 1'b0;
+                 if(control_func3 == 3'h0)  // addi
+                    control_alu = 4'd0;
+                 else if(control_func3 == 3'h4) // xori
+                    control_alu = 4'd5;
+                 else if(control_func3 == 3'h6) // ori 
+                    control_alu = 4'd4;
+                 else if(control_func3 == 3'h7) // andi 
+                    control_alu = 4'd3;
+                 else if(control_func3 == 3'h1 && control_func7 == 7'h0) // slli
+                    control_alu = 4'd3;
+                 else if(control_func3 == 3'h5 && control_func7 == 7'h0) // srli 
+                    control_alu = 4'd8;
+                 else if(control_func3 == 3'h5 && control_func7 == 7'h20) // sraii 
+                    control_alu = 4'd7;
+                 else if(control_func3 == 3'h2) // slti
+                    control_alu = 4'd9;
+                 else if(control_func3 == 3'h3) // sltui 
+                    control_alu = 4'd10;
+                 else
+                    control_alu = 4'd0;
+             end 
             
             7'b0100011: begin   // S-type (sw)
                 control_data_mem_we = 1'b1;

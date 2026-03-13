@@ -1,172 +1,220 @@
 Time resolution is 1 ps
---- Starting B-Type Instruction Tests ---
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 20
-	Raw Hex       : 0xfe208ae3
-	Binary Split  : 1_111111_00010_00001_000_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
+	PC Current    : 8
+	Raw Hex       : 0x00528213
+	Binary Split  : 000000000101_00101_000_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x1)=0x0000000a, RD2(x2)=0x0000000a
-	Imm Decoded   : -12 (0xfffffff4)
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x5)=0x0000000c
+	Imm Decoded   : 5 (0x00000005)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Inputs    : A=0x0000000c, B=0x00000005
+	ALU Result    : (17) 0x00000011
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT 0x00000011 -> x4
+==================================================
+
+ADDI (Expected: 17)
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 9
+	Raw Hex       : 0x00f2a213
+	Binary Split  : 000000001111_00101_010_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x15)=0x00000000
+	Imm Decoded   : 15 (0x0000000f)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A=0x0000000c, B=0x0000000f
+	ALU Result    : (1) 0x00000001
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT 0x00000001 -> x4
+==================================================
+
+SLTI (Expected: 1)
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 10
+	Raw Hex       : 0x0052b213
+	Binary Split  : 000000000101_00101_011_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x5)=0x0000000c
+	Imm Decoded   : 5 (0x00000005)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A=0x0000000c, B=0x00000005
 	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : BRANCH Target = 8 (PC + -12)
+	Action        : ALU_RESULT 0x00000000 -> x4
 ==================================================
 
-PASS [BEQ_TAKEN]
+SLTIU (Expected: 0)
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 24
-	Raw Hex       : 0xfe409ae3
-	Binary Split  : 1_111111_00100_00001_001_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
+	PC Current    : 11
+	Raw Hex       : 0x00a2c213
+	Binary Split  : 000000001010_00101_100_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x1)=0x0000000a, RD2(x4)=0x00000001
-	Imm Decoded   : -12 (0xfffffff4)
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x10)=0x00000000
+	Imm Decoded   : 10 (0x0000000a)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x0000000a, B=0x00000001
-	ALU Result    : (11) 0x0000000b
+	ALU Inputs    : A=0x0000000c, B=0x0000000a
+	ALU Result    : (6) 0x00000006
 
 [MEMORY/WB PHASE]
-	Action        : BRANCH Target = 12 (PC + -12)
+	Action        : ALU_RESULT 0x00000006 -> x4
 ==================================================
 
-PASS [BNE_TAKEN]
+XORI (Expected: 6)
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 28
-	Raw Hex       : 0xfe209ae3
-	Binary Split  : 1_111111_00010_00001_001_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
+	PC Current    : 12
+	Raw Hex       : 0x0022e213
+	Binary Split  : 000000000010_00101_110_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x1)=0x0000000a, RD2(x2)=0x0000000a
-	Imm Decoded   : -12 (0xfffffff4)
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x2)=0x00000000
+	Imm Decoded   : 2 (0x00000002)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x0000000a, B=0x0000000a
+	ALU Inputs    : A=0x0000000c, B=0x00000002
+	ALU Result    : (14) 0x0000000e
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT 0x0000000e -> x4
+==================================================
+
+ORI (Expected: 14)
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 13
+	Raw Hex       : 0x00d2f213
+	Binary Split  : 000000001101_00101_111_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x13)=0x00000000
+	Imm Decoded   : 13 (0x0000000d)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A=0x0000000c, B=0x0000000d
+	ALU Result    : (12) 0x0000000c
+
+[MEMORY/WB PHASE]
+	Action        : ALU_RESULT 0x0000000c -> x4
+==================================================
+
+ANDI (Expected: 12)
+
+==================================================
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
+==================================================
+
+[FETCH PHASE]
+	PC Current    : 14
+	Raw Hex       : 0x00229213
+	Binary Split  : 000000000010_00101_001_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
+
+[DECODE PHASE]
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x2)=0x00000000
+	Imm Decoded   : 2 (0x00000002)
+
+[EXECUTE PHASE]
+	ALU Inputs    : A=0x0000000c, B=0x00000002
 	ALU Result    : (0) 0x00000000
 
 [MEMORY/WB PHASE]
-	Action        : BRANCH Target = 16 (PC + -12)
+	Action        : ALU_RESULT 0x00000000 -> x4
 ==================================================
 
-PASS [BNE_NOT_TAKEN]
+SLLI (Expected: 48)
+SLLI fail: got 0
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 32
-	Raw Hex       : 0xfe41cae3
-	Binary Split  : 1_111111_00100_00011_100_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x3)=0xffffffff, RD2(x4)=0x00000001
-	Imm Decoded   : -12 (0xfffffff4)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A=0xffffffff, B=0x00000001
-	ALU Result    : (-2) 0xfffffffe
-
-[MEMORY/WB PHASE]
-	Action        : BRANCH Target = 20 (PC + -12)
-==================================================
-
-PASS [BLT_TAKEN]
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 36
-	Raw Hex       : 0xfe30dae3
-	Binary Split  : 1_111111_00011_00001_101_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
+	PC Current    : 15
+	Raw Hex       : 0x0022d213
+	Binary Split  : 000000000010_00101_101_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x1)=0x0000000a, RD2(x3)=0xffffffff
-	Imm Decoded   : -12 (0xfffffff4)
+	Reg Access    : RD1(x5)=0x0000000c, RD2(x2)=0x00000000
+	Imm Decoded   : 2 (0x00000002)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x0000000a, B=0xffffffff
-	ALU Result    : (11) 0x0000000b
+	ALU Inputs    : A=0x0000000c, B=0x00000002
+	ALU Result    : (3) 0x00000003
 
 [MEMORY/WB PHASE]
-	Action        : BRANCH Target = 24 (PC + -12)
+	Action        : ALU_RESULT 0x00000003 -> x4
 ==================================================
 
-PASS [BGE_TAKEN]
+SRLI (Expected: 3)
 
 ==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
+      RISC-V CPU DEBUG DASHBOARD | I-TYPE (OP-IMM)
 ==================================================
 
 [FETCH PHASE]
-	PC Current    : 40
-	Raw Hex       : 0xfe326ae3
-	Binary Split  : 1_111111_00011_00100_110_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
+	PC Current    : 16
+	Raw Hex       : 0x40235213
+	Binary Split  : 010000000010_00110_101_00100_0010011
+	Field Map     : [imm] [rs1] [f3] [rd] [opcode]
 
 [DECODE PHASE]
-	Reg Access    : RD1(x4)=0x00000001, RD2(x3)=0xffffffff
-	Imm Decoded   : -12 (0xfffffff4)
+	Reg Access    : RD1(x6)=0xfffffff0, RD2(x2)=0x00000000
+	Imm Decoded   : 1026 (0x00000402)
 
 [EXECUTE PHASE]
-	ALU Inputs    : A=0x00000001, B=0xffffffff
-	ALU Result    : (2) 0x00000002
+	ALU Inputs    : A=0xfffffff0, B=0x00000402
+	ALU Result    : (-4) 0xfffffffc
 
 [MEMORY/WB PHASE]
-	Action        : BRANCH Target = 28 (PC + -12)
+	Action        : ALU_RESULT 0xfffffffc -> x4
 ==================================================
 
-PASS [BLTU_TAKEN]
-
-==================================================
-      RISC-V CPU DEBUG DASHBOARD | B-TYPE (BRANCH)
-==================================================
-
-[FETCH PHASE]
-	PC Current    : 44
-	Raw Hex       : 0xfe11fae3
-	Binary Split  : 1_111111_00001_00011_111_1010_1_1100011
-	Field Map     : [imm12] [imm10:5] [rs2] [rs1] [f3] [imm4:1] [imm11] [opcode]
-
-[DECODE PHASE]
-	Reg Access    : RD1(x3)=0xffffffff, RD2(x1)=0x0000000a
-	Imm Decoded   : -12 (0xfffffff4)
-
-[EXECUTE PHASE]
-	ALU Inputs    : A=0xffffffff, B=0x0000000a
-	ALU Result    : (-11) 0xfffffff5
-
-[MEMORY/WB PHASE]
-	Action        : BRANCH Target = 32 (PC + -12)
-==================================================
-
-PASS [BGEU_TAKEN]
---- All B-Type Tests Completed with 0 errors ---
-$finish called at time : 76 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_btype.sv" Line 99
+SRAI (Expected: -4 = 0xFFFF_FFFC)
+--- All I-Type Tests Completed with 1 errors ---
+$finish called at time : 96 ns : File "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sim_1/new/tb_itype.sv" Line 133

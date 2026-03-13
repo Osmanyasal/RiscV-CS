@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/cpu.tcl"
+  variable script "C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.runs/synth_1/cpu.tcl"
   variable category "vivado_synth"
 }
 
@@ -63,22 +63,22 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.cache/wt [current_project]
-set_property parent.project_path /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.cache/wt [current_project]
+set_property parent.project_path C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.cache/ip [current_project]
+set_property ip_output_repo c:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/alu.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/control_unit.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_data.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_instruction.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/regfile.sv
-  /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/alu.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/control_unit.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_data.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/memory_instruction.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/pc.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/regfile.sv
+  C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/sources_1/new/cpu.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -91,7 +91,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/utils_1/imports/synth_1/cpu.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/osmya/Desktop/RiscV-CS/rv32i_single_cycle/rv32i_single_cycle.srcs/utils_1/imports/synth_1/cpu.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
