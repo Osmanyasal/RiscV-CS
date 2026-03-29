@@ -1,2 +1,2 @@
 # RiscV-CS (Custom Shop)
-RISC-V cores with an integrated Performance Monitoring Unit (PMU) for performance analysis and optimization. Implemented four distinct microarchitectures: single-cycle, multi-cycle, pipelined, and pipelined superscalar.
+RISC-V cores with an integrated Performance Monitoring Unit (PMU) for performance analysis and optimization. Implemented tow distinct microarchitectures: single-cycle and pipelined.
