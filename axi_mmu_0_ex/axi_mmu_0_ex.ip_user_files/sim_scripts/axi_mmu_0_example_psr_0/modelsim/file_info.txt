@@ -1,0 +1,5 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../home/rt7/Documents/Xilinx/2025.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../home/rt7/Documents/Xilinx/2025.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"
+proc_sys_reset_v5_0_vh_rfs.vhd,vhdl,proc_sys_reset_v5_0_17,../../../ipstatic/hdl/proc_sys_reset_v5_0_vh_rfs.vhd,incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"
+axi_mmu_0_example_psr_0.vhd,vhdl,xil_defaultlib,../../../../axi_mmu_0_ex.gen/sources_1/ip/axi_mmu_0_example_psr_0/sim/axi_mmu_0_example_psr_0.vhd,incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,2 @@
+axi_mmu_0.v,verilog,xil_defaultlib,../../../../axi_mmu_0_ex.gen/sources_1/ip/axi_mmu_0/sim/axi_mmu_0.v,incdir="../../../ipstatic/ipshared/ec67/hdl"incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"incdir="../../../ipstatic/ipshared/ec67/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

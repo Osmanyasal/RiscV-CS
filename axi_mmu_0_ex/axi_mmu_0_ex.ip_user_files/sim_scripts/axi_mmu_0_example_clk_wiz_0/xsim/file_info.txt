@@ -1,0 +1,3 @@
+axi_mmu_0_example_clk_wiz_0_clk_wiz.v,verilog,xil_defaultlib,../../../../axi_mmu_0_ex.gen/sources_1/ip/axi_mmu_0_example_clk_wiz_0/axi_mmu_0_example_clk_wiz_0_clk_wiz.v,incdir="../../../ipstatic"incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"incdir="../../../ipstatic"
+axi_mmu_0_example_clk_wiz_0.v,verilog,xil_defaultlib,../../../../axi_mmu_0_ex.gen/sources_1/ip/axi_mmu_0_example_clk_wiz_0/axi_mmu_0_example_clk_wiz_0.v,incdir="../../../ipstatic"incdir="../../../../../../../Documents/Xilinx/2025.1/data/rsb/busdef"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

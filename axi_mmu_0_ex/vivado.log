@@ -1,0 +1,162 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Apr 16 16:05:35 2026
+# Process ID         : 863300
+# Current directory  : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex
+# Command line       : vivado -notrace -source /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/.Xil/axi_mmu_0/axi_mmu_0_ex.tcl
+# Log file           : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/vivado.log
+# Journal file       : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/vivado.jou
+# Running On         : rt7-desktop1
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 7950X 16-Core Processor
+# CPU Frequency      : 5385.639 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 66418 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75007 MB
+# Available Virtual  : 59626 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/rt7/Documents/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+source /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/.Xil/axi_mmu_0/axi_mmu_0_ex.tcl -notrace
+INFO: [open_example_project] Creating new example project...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rt7/Documents/Xilinx/2025.1/Vivado/data/ip'.
+INFO: [open_example_project] Loading IP Catalog...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rt7/Desktop'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/rt7/Desktop' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex'.)
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 10104.777 ; gain = 90.000 ; free physical = 4810 ; free virtual = 55912
+INFO: [open_example_project] Importing original IP ...
+WARNING: [Coretcl 2-2366] IP file '/home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/.Xil/axi_mmu_0/axi_mmu_0.xci' was created in a subcore context and may not behave as expected when used in a standalone context.
+INFO: [open_example_project] Generating the example project IP ...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_mmu_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_mmu_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_mmu_0'...
+INFO: [open_example_project] Adding example synthesis HDL files ...
+INFO: [open_example_project] Adding example XDC files ...
+INFO: [open_example_project] Adding simulation HDL files ...
+INFO: [open_example_project] Sourcing example extension scripts ...
+INFO: [open_example_project] Sourcing extension script: ttcl/example_scriptext.tcl
+WARNING: [Common 17-599] Property 'BOARD' is deprecated for object type 'project'. Use 'board_part'.
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_mmu_0_example_clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_mmu_0_example_clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_mmu_0_example_clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'axi_mmu_0_example_clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_mmu_0_example_clk_wiz_0'...
+WARNING: [Vivado 12-818] No files matched 'axi_mmu_0_example_proc_sys_reset_0.xci'
+INFO: [open_example_project] Rebuilding top IP...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'axi_mmu_0_example_psr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_mmu_0_example_psr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'axi_mmu_0_example_psr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'axi_mmu_0_example_psr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_mmu_0_example_psr_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'axi_mmu_0'...
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from '/home/rt7/Documents/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (AMD Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Documents/Xilinx/2025.1/data/xsim'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/xsim/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Siemens ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/modelsim'
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (proc_sys_reset_v5_0_17) - source(s) will be compiled locally with the design
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/modelsim/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Siemens Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/questa'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/questa/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-5] Generating a 3-step script for 'xcelium'. To create a single-step script, use the -single_step switch. Please note that the single-step script generation is not supported currently for system design containing SystemC/cpp/C sources.
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/xcelium'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/xcelium/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/vcs'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/vcs/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/riviera'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_psr_0/riviera/axi_mmu_0_example_psr_0.sh'
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from '/home/rt7/Documents/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (AMD Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Documents/Xilinx/2025.1/data/xsim'
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (xil_defaultlib) - source(s) will be compiled locally with the design
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/xsim/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Siemens ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/modelsim'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/modelsim/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Siemens Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/questa'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/questa/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-5] Generating a 3-step script for 'xcelium'. To create a single-step script, use the -single_step switch. Please note that the single-step script generation is not supported currently for system design containing SystemC/cpp/C sources.
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/xcelium'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/xcelium/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/vcs'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/vcs/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/riviera'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0_example_clk_wiz_0/riviera/axi_mmu_0_example_clk_wiz_0.sh'
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from '/home/rt7/Documents/Xilinx/2025.1/Vivado/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (AMD Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Documents/Xilinx/2025.1/data/xsim'
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (xil_defaultlib) - source(s) will be compiled locally with the design
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/xsim/axi_mmu_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Siemens ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/modelsim'
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (axi_infrastructure_v1_1_0) - source(s) will be compiled locally with the design
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (axi_register_slice_v2_1_35) - source(s) will be compiled locally with the design
+INFO: [SIM-utils-40] IP version not found from pre-compiled library (axi_mmu_v2_1_33) - source(s) will be compiled locally with the design
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/modelsim/axi_mmu_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Siemens Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/questa'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/questa/axi_mmu_0.sh'
+INFO: [exportsim-Tcl-5] Generating a 3-step script for 'xcelium'. To create a single-step script, use the -single_step switch. Please note that the single-step script generation is not supported currently for system design containing SystemC/cpp/C sources.
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/xcelium'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/xcelium/axi_mmu_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/vcs'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/vcs/axi_mmu_0.sh'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.cache/compile_simlib/riviera'
+INFO: [exportsim-Tcl-29] Script generated: '/home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/axi_mmu_0_ex.ip_user_files/sim_scripts/axi_mmu_0/riviera/axi_mmu_0.sh'
+INFO: [open_example_project] Open Example Project completed
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 16 16:06:23 2026...

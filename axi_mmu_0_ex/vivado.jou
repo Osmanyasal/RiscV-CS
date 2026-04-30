@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Apr 16 16:05:35 2026
+# Process ID         : 863300
+# Current directory  : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex
+# Command line       : vivado -notrace -source /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/.Xil/axi_mmu_0/axi_mmu_0_ex.tcl
+# Log file           : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/vivado.log
+# Journal file       : /home/rt7/Desktop/RiscV-CS/axi_mmu_0_ex/vivado.jou
+# Running On         : rt7-desktop1
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 7950X 16-Core Processor
+# CPU Frequency      : 5385.639 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 66418 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75007 MB
+# Available Virtual  : 59626 MB
+#-----------------------------------------------------------
+start_gui
+source /home/rt7/Desktop/RiscV-CS/rv32i_single_cycle/.Xil/axi_mmu_0/axi_mmu_0_ex.tcl -notrace
+update_compile_order -fileset sources_1

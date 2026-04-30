@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Sun Mar  1 19:01:50 2026
-| Host         : rt7-laptop-duo running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri Apr 24 13:15:02 2026
+| Host         : rt7-desktop1 running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
 | Design       : cpu
 | Device       : xc7a100tcsg324-1
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 2033 |     0 |          0 |     63400 |  3.21 |
-|   LUT as Logic             | 1521 |     0 |          0 |     63400 |  2.40 |
+| Slice LUTs*                | 2069 |     0 |          0 |     63400 |  3.26 |
+|   LUT as Logic             | 1557 |     0 |          0 |     63400 |  2.46 |
 |   LUT as Memory            |  512 |     0 |          0 |     19000 |  2.69 |
 |     LUT as Distributed RAM |  512 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
@@ -41,10 +41,12 @@ Table of Contents
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |  512 |     0 |          0 |     31700 |  1.62 |
 | F8 Muxes                   |  128 |     0 |          0 |     15850 |  0.81 |
+| Unique Control Sets        |   36 |       |          0 |     15850 |  0.23 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
+** Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
 
 
 1.1 Summary of Registers by Type
@@ -152,20 +154,20 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 1032 |                 LUT |
 | FDCE     | 1024 |        Flop & Latch |
+| LUT6     | 1022 |                 LUT |
 | RAMS64E  |  512 |  Distributed Memory |
 | MUXF7    |  512 |               MuxFx |
-| LUT5     |  211 |                 LUT |
-| LUT4     |  192 |                 LUT |
-| LUT2     |  161 |                 LUT |
+| LUT5     |  247 |                 LUT |
+| LUT4     |  202 |                 LUT |
+| LUT2     |  168 |                 LUT |
 | MUXF8    |  128 |               MuxFx |
 | CARRY4   |   52 |          CarryLogic |
-| LUT3     |   37 |                 LUT |
 | OBUF     |   32 |                  IO |
+| LUT3     |   24 |                 LUT |
+| LUT1     |    6 |                 LUT |
 | DSP48E1  |    4 |    Block Arithmetic |
 | IBUF     |    2 |                  IO |
-| LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
